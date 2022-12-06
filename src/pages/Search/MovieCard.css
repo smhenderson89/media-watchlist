@@ -10,16 +10,26 @@
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 5px 15px 2px #000000; 
   box-shadow: 0px 5px 15px 2px #000000;
+  align-items: center;
 }
 
 .movie-card-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.posterImage{
+  max-height: 300px;
+  width: auto;
 }
 
 .movie-container{
   margin-top: 50px;
+}
+
+/* More Info*/
+.more-info-grey{
+  background-color: lightgrey;
 }
 
 .imdblogo {

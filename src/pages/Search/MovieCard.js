@@ -65,12 +65,15 @@ export default function MovieCard(props) {
 
   const justWatchURL = "https://www.justwatch.com/us/movie/" + dashedTitle;
 
+  //variant = "top"
+
   return (
     <div className="movie-card-container">
       {/* copied this card syntax from react-bootstrap */}
-      <Card className="movie-card" style={{ width: "18rem" }}>
+      <Card className="movie-card" style={{ width: "15rem" }}>
         {/* using the the Poster variable defined from our prop deconstruction to reference a src="" for the image */}
-        <Card.Img variant="top" src={Poster === "N/A" ? imageNA : Poster} />
+        <Card.Img class = "posterImage" src={Poster === "N/A" ? imageNA : Poster} />
+
         <Card.Body>
           {/* calling the title and year of the movie, within this react-bootstrap card */}
           <Card.Title>{Title}</Card.Title>
@@ -107,13 +110,13 @@ export default function MovieCard(props) {
           <Modal.Title>{Title}</Modal.Title>
         </Modal.Header>
         <Row>
-        <ListGroup.Item>Director: {Director}</ListGroup.Item>
+          <ListGroup.Item variant = "secondary"> Director: {Director}</ListGroup.Item>
           <ListGroup.Item>Runtime: {Runtime}</ListGroup.Item>
-          <ListGroup.Item>Year: {Year}</ListGroup.Item>
+          <ListGroup.Item variant = "secondary">Year: {Year}</ListGroup.Item>
           <ListGroup.Item>Language: {Language}</ListGroup.Item>
-          <ListGroup.Item>Rating: {Rated}</ListGroup.Item>
+          <ListGroup.Item variant = "secondary">Rating: {Rated}</ListGroup.Item>
           <ListGroup.Item>Metascore: {Metascore}</ListGroup.Item>
-          <ListGroup.Item>imdbRating: {imdbRating}</ListGroup.Item>
+          <ListGroup.Item variant = "secondary">imdbRating: {imdbRating}</ListGroup.Item>
           <ListGroup.Item>Genre: {Genre}</ListGroup.Item>
           <ListGroup.Item>{Plot}</ListGroup.Item>
           <Col>
