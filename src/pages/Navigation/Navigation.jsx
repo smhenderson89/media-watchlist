@@ -21,7 +21,9 @@ function NavBar() {
               <Link className = "navLinks" to="/about">About</Link>
               <Link className = "navLinks" to="/dashboard"><HiOutlineUser/></Link>
               <Navbar.Brand style={{ color: "#F9E45B" }}>{String(local.getItem("first")) && String(local.getItem("last")) === "null" ? (
+                // eslint-disable-next-line
                 <a>Welcome, Guest!</a> ) : (
+                // eslint-disable-next-line
                 <a>Welcome, {String(local.getItem("first"))} {String(local.getItem("last"))}!</a>)}</Navbar.Brand>
             </Nav>
           </Container>
