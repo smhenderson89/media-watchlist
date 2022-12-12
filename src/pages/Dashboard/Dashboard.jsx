@@ -10,6 +10,9 @@ function Dashboard() {
   let newPassword = "";
   let newEmail = "";
   let id = local.userID;
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
 
   function logout() {
     fetch("https://mwl-backend-v2.herokuapp.com/logout", {
@@ -31,6 +34,7 @@ function Dashboard() {
   }
 
   function changePassword() {
+    showValues()
     fetch("https://mwl-backend-v2.herokuapp.com/users/password/:id", {
       method: "PUT",
       headers: {
@@ -38,8 +42,8 @@ function Dashboard() {
         "Content-Type": "application/json"
       },
       body : JSON.stringify({
-        id : localStorage.id,
-        email : localStorage.email,
+        id : id,
+        email : local.email,
         newEmail : newEmail})
       }).then(res => res.json())
       .then(data => {
@@ -108,7 +112,7 @@ function Dashboard() {
               <div>Email: {String(local.getItem("email"))}</div>
             </Card.Title>
             <div>
-              <form className="input">
+              <form className="input" onSubmit={handleSubmit}>
                 <label>
                   Update Email:
                   <input className="input-class" type="text" name="email" onChange={(e) => newEmail = (e.target.value)} />
@@ -118,7 +122,7 @@ function Dashboard() {
             </div>
             {/* User clicks button, updates email to new email, show toast information */}
             <div>
-              <form>
+              <form className="input" onSubmit={handleSubmit}>
                 <label>
                   Update Password:
                   <input className="input-class" type="text" name="email" onChange={(e) => newPassword = (e.target.value)} />
