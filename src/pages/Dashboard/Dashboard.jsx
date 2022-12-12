@@ -24,7 +24,6 @@ function Dashboard() {
     })
       .then(res => res.json())
       .then(data => {
-        /* console.log(data); */
         if (data.message) { 
           local.clear(); 
           navigate("/");
@@ -35,16 +34,14 @@ function Dashboard() {
 
   function changePassword() {
     showValues()
-    fetch("https://mwl-backend-v2.herokuapp.com/users/password/:id", {
+    fetch("https://mwl-backend-v2.herokuapp.com/users/password", {
       method: "PUT",
       headers: {
         'Accept': "application/json",
         "Content-Type": "application/json"
       },
       body : JSON.stringify({
-        id : id,
-        email : local.email,
-        newEmail : newEmail})
+        id : id})
       }).then(res => res.json())
       .then(data => {
         console.log(data)
@@ -62,14 +59,16 @@ function Dashboard() {
   }
 
   function changeEmail() {
-    fetch("https://mwl-backend-v2.herokuapp.com/users/email/:id", {
+    showValues()
+    fetch("https://mwl-backend-v2.herokuapp.com/users/email", {
       method: "PUT",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id : id, 
+        id : id,
+        email : local.email, 
         newEmail: newEmail})
     }).then(res => res.json())
     .then (data => {
