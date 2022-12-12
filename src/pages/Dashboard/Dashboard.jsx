@@ -31,14 +31,30 @@ function Dashboard() {
   }
 
   function changePassword() {
-
     fetch("https://mwl-backend-v2.herokuapp.com/users/password/:id", {
       method: "PUT",
       headers: {
-        Accept: "application/json",
+        'Accept': "application/json",
         "Content-Type": "application/json"
-      }
-    })
+      },
+      body : JSON.stringify({
+        id : localStorage.id,
+        email : localStorage.email,
+        newEmail : newEmail})
+      }).then(res => res.json())
+      .then(data => {
+        console.log(data)
+        if (data.updatedEmail) {
+          localStorage.setItem("email", data.updatedEmail);
+          toast.success('Email updated!');
+          navigate('/dashboard');
+        } else {
+          toast.error('Email not updated')
+        }
+      })
+      .catch(function(err) {
+        console.log('Update Email error', err);
+      });
   }
 
   function changeEmail() {

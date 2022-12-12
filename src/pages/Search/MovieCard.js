@@ -89,11 +89,6 @@ export default function MovieCard(props) {
           >
             More Info
           </Button>
-          {/*           
-          <Button variant="primary" onClick={handleShow}>
-            Launch demo modal
-          </Button>*/}
-
           <Button
             fontSize="30px"
             className="button-19 m-2"
