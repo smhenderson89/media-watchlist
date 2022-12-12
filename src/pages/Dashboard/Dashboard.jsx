@@ -62,7 +62,7 @@ function Dashboard() {
   }
 
   function changeEmail() {
-    fetch("https://mwl-backend-v2.herokuapp.com/users/email/:id", {
+    fetch("https://mwl-backend-v2.herokuapp.com/users/email", {
       method: "PUT",
       headers: {
         Accept: "application/json",
