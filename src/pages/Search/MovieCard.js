@@ -8,7 +8,7 @@ import "./MovieCard.css";
 import thumbsup from "./images/thumbsup.jpg";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { imageNA } from "../../components/shared/images/imageNA.png"
+import imageNA from "../../components/shared/images/imageNA.png"
 
 export default function MovieCard(props) {
   // Todo: Guard against 404 errors on url links on modal
@@ -89,11 +89,6 @@ export default function MovieCard(props) {
           >
             More Info
           </Button>
-          {/*           
-          <Button variant="primary" onClick={handleShow}>
-            Launch demo modal
-          </Button>*/}
-
           <Button
             fontSize="30px"
             className="button-19 m-2"
