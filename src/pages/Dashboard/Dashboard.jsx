@@ -58,12 +58,16 @@ function Dashboard() {
       });
   }
 
+  // Debug, fetch to local host
+  // https://mwl-backend-v2.herokuapp.com/users/email
+
   function changeEmail() {
     showValues()
     fetch("https://mwl-backend-v2.herokuapp.com/users/email", {
       method: "PUT",
+      mode: 'cors',
       headers: {
-        Accept: "application/json",
+        'Accept' : "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
