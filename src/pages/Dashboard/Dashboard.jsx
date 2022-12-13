@@ -72,11 +72,11 @@ function Dashboard() {
       },
       body: JSON.stringify({
         id : id,
-        email : local.email, 
         newEmail: newEmail})
     }).then(res => res.json())
     .then (data => {
       if (data) {
+        console.log(data)
         console.log('Email Updated!')
         toast.success('Email Updated')
       } else {
