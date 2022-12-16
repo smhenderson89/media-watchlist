@@ -20,15 +20,18 @@ function Dashboard() {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
-      }
+      },
+      body : JSON.stringify({
+        id : id})
     })
       .then(res => res.json())
       .then(data => {
         if (data.message) { 
           local.clear(); 
-          navigate("/");
+          navigate("/logout");
+          toast.success("Logout Successful!");
         }
-        toast.success("Logout Successful!");
+        toast.error("User not logged in")
       });
   }
 
@@ -41,10 +44,12 @@ function Dashboard() {
         "Content-Type": "application/json"
       },
       body : JSON.stringify({
-        id : id})
+        id : id,
+        newPass : newPassword
+      })
       }).then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         if (data.updatedEmail) {
           localStorage.setItem("email", data.updatedEmail);
           toast.success('Email updated!');
@@ -78,6 +83,8 @@ function Dashboard() {
       if (data) {
         console.log(data)
         console.log('Email Updated!')
+        localStorage.setItem("email", data.updatedEmail)
+        navigate('/dashboard')
         toast.success('Email Updated')
       } else {
         toast.error('An Error Has Occured')
