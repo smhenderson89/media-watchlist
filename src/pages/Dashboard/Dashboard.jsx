@@ -51,7 +51,7 @@ function Dashboard() {
       .then(data => {
         // console.log(data)
         if (data.updatedEmail) {
-          localStorage.setItem("email", data.updatedEmail);
+          local.setItem("email", data.updatedEmail);
           toast.success('Email updated!');
           navigate('/dashboard');
         } else {
@@ -83,7 +83,7 @@ function Dashboard() {
       if (data) {
         console.log(data)
         console.log('Email Updated!')
-        localStorage.setItem("email", data.updatedEmail)
+        local.setItem("email", data.updatedEmail)
         navigate('/dashboard')
         toast.success('Email Updated')
       } else {
