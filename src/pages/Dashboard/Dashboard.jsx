@@ -16,7 +16,7 @@ function Dashboard() {
 
   function logout() {
     fetch("https://mwl-backend-v2.herokuapp.com/logout", {
-      method: "GET",
+      method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
@@ -26,7 +26,7 @@ function Dashboard() {
     })
       .then(res => res.json())
       .then(data => {
-        if (data.message) { 
+        if (data.logout) { 
           local.clear(); 
           navigate("/logout");
           toast.success("Logout Successful!");
@@ -49,22 +49,17 @@ function Dashboard() {
       })
       }).then(res => res.json())
       .then(data => {
-        // console.log(data)
-        if (data.updatedEmail) {
-          local.setItem("email", data.updatedEmail);
-          toast.success('Email updated!');
+        if (data.result) {
+          toast.success('Password is updated!');
           navigate('/dashboard');
         } else {
-          toast.error('Email not updated')
+          toast.error('An Error has Occued')
         }
       })
       .catch(function(err) {
-        console.log('Update Email error', err);
+        console.log('Update Password error', err);
       });
   }
-
-  // Debug, fetch to local host
-  // https://mwl-backend-v2.herokuapp.com/users/email
 
   function changeEmail() {
     showValues()
