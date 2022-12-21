@@ -29,10 +29,11 @@ function Dashboard() {
       .then(data => {
         if (data.logout) { 
           local.clear(); 
-          navigate("/logout");
-          toast.success("Logout Successful!");
+          navigate("/");
+          toast.success("Logout Successful! Thanks for using Media Watch List");
+        } else {
+          toast.error("User not logged in")
         }
-        toast.error("User not logged in")
       });
   }
 
@@ -47,8 +48,7 @@ function Dashboard() {
       },
       body : JSON.stringify({
         id : id,
-        newPass : newPassword
-      })
+        newPass : newPassword})
       }).then(res => res.json())
       .then(data => {
         if (data.result) {
