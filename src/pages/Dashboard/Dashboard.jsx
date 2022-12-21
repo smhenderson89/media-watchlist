@@ -17,6 +17,7 @@ function Dashboard() {
   function logout() {
     fetch("https://mwl-backend-v2.herokuapp.com/logout", {
       method: "POST",
+      mode: 'cors',
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
@@ -39,6 +40,7 @@ function Dashboard() {
     showValues()
     fetch("https://mwl-backend-v2.herokuapp.com/users/password", {
       method: "PUT",
+      mode: 'cors',
       headers: {
         'Accept': "application/json",
         "Content-Type": "application/json"
@@ -130,7 +132,7 @@ function Dashboard() {
               <form className="input" onSubmit={handleSubmit}>
                 <label>
                   Update Password:
-                  <input className="input-class" type="text" name="email" onChange={(e) => newPassword = (e.target.value)} />
+                  <input className="input-class" type="password" name="password" onChange={(e) => newPassword = (e.target.value)} />
                 </label>
                 <input className="button-19 m-2" type="submit" value="Submit" onClick={changePassword} />
               </form>
