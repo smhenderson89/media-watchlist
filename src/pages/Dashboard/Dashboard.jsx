@@ -31,8 +31,9 @@ function Dashboard() {
           local.clear(); 
           navigate("/");
           toast.success("Logout Successful! Thanks for using Media Watch List");
+        } else {
+          toast.error("User not logged in")
         }
-        toast.error("User not logged in")
       });
   }
 
