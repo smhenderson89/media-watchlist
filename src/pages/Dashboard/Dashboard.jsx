@@ -38,7 +38,6 @@ function Dashboard() {
   }
 
   function changePassword() {
-    showValues()
     fetch("https://mwl-backend-v2.herokuapp.com/users/password", {
       method: "PUT",
       mode: 'cors',
@@ -64,7 +63,6 @@ function Dashboard() {
   }
 
   function changeEmail() {
-    showValues()
     fetch("https://mwl-backend-v2.herokuapp.com/users/email", {
       method: "PUT",
       mode: 'cors',
@@ -78,7 +76,6 @@ function Dashboard() {
     }).then(res => res.json())
     .then (data => {
       if (data.result) {
-        console.log('Email Updated!')
         local.setItem("email", data.updatedEmail)
         navigate('/dashboard')
         toast.success('Email Updated')
@@ -86,13 +83,6 @@ function Dashboard() {
         toast.error(`Error: ${data.message}`)
       }
     })
-  }
-
-  // Debug Button while I troubleshoot - Scott
-  function showValues() {
-    console.log(`Email is ${newEmail}`);
-    console.log(`PWord is ${newPassword}`);
-    console.log(`UserID is ${id}`);
   }
 
   return (
@@ -137,7 +127,7 @@ function Dashboard() {
               </form>
             </div>
             <button className="button-19 m-2" onClick={logout}>Log Out</button>
-            <button className="button-19 m-2"onClick={showValues}>DEBUG Console  Log</button>
+            {/* <button className="button-19 m-2"onClick={showValues}>DEBUG Console  Log</button> */}
             {/* Logout from account */}
           </Card.Body>
         </Card>
