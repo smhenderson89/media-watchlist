@@ -34,7 +34,6 @@ export default function MovieCard(props) {
   const getMovie = imdbId => {
     const local = window.localStorage;
     let userID = local.getItem("userID");
-    // console.log(userID);
     axios
       .get(`https://www.omdbapi.com/?i=${imdbId}&apikey=39132f6b`)
       .then(res => {

@@ -38,7 +38,6 @@ function Dashboard() {
   }
 
   function changePassword() {
-    showValues()
     fetch("https://mwl-backend-v2.herokuapp.com/users/password", {
       method: "PUT",
       mode: 'cors',
@@ -64,7 +63,6 @@ function Dashboard() {
   }
 
   function changeEmail() {
-    showValues()
     fetch("https://mwl-backend-v2.herokuapp.com/users/email", {
       method: "PUT",
       mode: 'cors',
@@ -77,23 +75,14 @@ function Dashboard() {
         newEmail: newEmail})
     }).then(res => res.json())
     .then (data => {
-      if (data) {
-        console.log(data)
-        console.log('Email Updated!')
+      if (data.result) {
         local.setItem("email", data.updatedEmail)
         navigate('/dashboard')
         toast.success('Email Updated')
       } else {
-        toast.error('An Error Has Occured')
+        toast.error(`Error: ${data.message}`)
       }
     })
-  }
-
-  // Debug Button while I troubleshoot - Scott
-  function showValues() {
-    console.log(`Email is ${newEmail}`);
-    console.log(`PWord is ${newPassword}`);
-    console.log(`UserID is ${id}`);
   }
 
   return (
@@ -137,13 +126,8 @@ function Dashboard() {
                 <input className="button-19 m-2" type="submit" value="Submit" onClick={changePassword} />
               </form>
             </div>
-            {/* User click buttons, gives option to update password 
-            toast notifcation that user password has been updated */}
-            <button className="button-19 m-2">Delete Account</button>
-            {/* Delete account, delete user and then switch user to registration page
-            show toast notifcation that account has been delete */}
             <button className="button-19 m-2" onClick={logout}>Log Out</button>
-            <button className="button-19 m-2"onClick={showValues}>DEBUG Console  Log</button>
+            {/* <button className="button-19 m-2"onClick={showValues}>DEBUG Console  Log</button> */}
             {/* Logout from account */}
           </Card.Body>
         </Card>
