@@ -121,7 +121,7 @@ function Dashboard() {
               <form className="input" onSubmit={handleSubmit}>
                 <label>
                   Update Password:
-                  <input className="input-class" type="password" name="password" onChange={(e) => newPassword = (e.target.value)} />
+                  <input className="input-class" type="password" name="new-password" onChange={(e) => newPassword = (e.target.value)} />
                 </label>
                 <input className="button-19 m-2" type="submit" value="Submit" onClick={changePassword} />
               </form>
