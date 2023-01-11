@@ -111,7 +111,7 @@ function Dashboard() {
               <form className="input" onSubmit={handleSubmit}>
                 <label>
                   Update Email:
-                  <input className="input-class" type="text" name="email" onChange={(e) => newEmail = (e.target.value)} />
+                  <input className="input-class" type="text" name="new-email" onChange={(e) => newEmail = (e.target.value)} />
                 </label>
                 <input className="button-19 m-2" type="submit" value="Submit" onClick = {changeEmail} />
               </form>

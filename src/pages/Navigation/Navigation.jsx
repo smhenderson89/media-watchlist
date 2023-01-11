@@ -16,7 +16,7 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Container className = "navBarLinks">
             <Nav className="navbar-nav">
-              <Link className = "navLinks" to="/medialist">Home</Link>
+              <Link className = "navLinks" to="/medialist">Search</Link>
               <Link className = "navLinks" to="/watchlist">Watchlist</Link>
               <Link className = "navLinks" to="/about">About</Link>
               <Link className = "navLinks" to="/dashboard"><HiOutlineUser/></Link>

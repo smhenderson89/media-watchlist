@@ -13,7 +13,19 @@ import "./About.css";
 function About() {
   return (
     <>
+        <Container className = "description">
+            <h3>Media Watch List - Information at Your Fingertips</h3>
+            <div>Tired of your kid watching Cars 3 for the 100th time? Excited about the newest Marvel release but not sure it is appropriate for you kid?</div>
+            <br></br>
+            <div>Media Watch List is a website that aggregates information from movie databases for a user to easily like or add a movie to a watchlist. 
+            The market for our project is specifically parents of young children, who need an easy way to save movie recommendations and review relevant 
+            information such as ratings before showing their child a new movie. No more scrolling endlessly through various notes in your note app to remember 
+            where you stashed recommendations from friends, you can save your movies in an organized and informative way using our website.
+            </div>
+
+        </Container>
         <Container className ="profileCard">
+            <h3>Contact Information</h3>
             <Row>
                 <Col>
                 <Card>

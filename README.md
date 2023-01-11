@@ -126,6 +126,7 @@ Github: [https://github.com/mwoolf87](https://github.com/mwoolf87)
 ## Acknowledgments
 
 * The DigitalCrafts Teachers and Teaching Assistants
+* FreeIcons: [https://www.freeiconspng.com/](Link)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
