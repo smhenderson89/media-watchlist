@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Button, Col, Row, Modal, Image } from "react-bootstrap";
+import { Card, Button, Col, Row, Modal, Image, ListGroup } from "react-bootstrap";
 import imdblogo from "../../components/shared/images/imdb.png";
 import csmlogo from "../../components/shared/images/csm.png";
 import justwatch from "../../components/shared/images/justwatch-square.png";
@@ -7,6 +7,7 @@ import axios from "axios";
 import "../Search/MovieCard.css";
 import { toast } from 'react-toastify';
 import { imageNA } from "../../components/shared/images/imageNA.png"
+import "./WatchListCard.css";
 
 export default function WatchListCard({ movie, setWatchListData }) {
   const [modalShow, setModalShow] = useState(false);
@@ -37,7 +38,7 @@ export default function WatchListCard({ movie, setWatchListData }) {
     );
     axios
       .get(`https://mwl-backend-v2.herokuapp.com/watchlist/${userID}`)
-      .then(res => setWatchListData(res.data));
+      .then(res => setWatchListData(res.data.information));
       toast.success('Movie Deleted!');
   };
 
@@ -47,7 +48,7 @@ export default function WatchListCard({ movie, setWatchListData }) {
         <div className="movie-card-container">
           <Card className="movie-card" style={{ width: "18rem" }}>
             <Card.Img
-              variant="top"
+              variant="top" onClick={() => setModalShow(true)}
               src={movie.poster === "N/A" ? imageNA : movie.poster}
             />
             <Card.Body>
@@ -73,21 +74,18 @@ export default function WatchListCard({ movie, setWatchListData }) {
               <Modal.Title>{movie.title}</Modal.Title>
             </Modal.Header>
             <Row>
-              <Col>Director: {movie.director}</Col>
-              <Col>Runtime: {movie.runTime}</Col>
-              <Col>Year: {movie.year}</Col>
-              <Col>Language: {movie.language}</Col>
-              <Col>Rating: {movie.rated}</Col>
-              <Col>Metascore: {movie.metaScore}</Col>
-              <Col>imdbRating: {movie.imdbRating}</Col>
-            </Row>
-            <Row>
-              <Col>Genre: {movie.genre}</Col>
-            </Row>
-            <Modal.Body>{movie.plot}</Modal.Body>
-            <Row>
+              <ListGroup.Item variant = "secondary">Director: {movie.director}</ListGroup.Item>
+              <ListGroup.Item>Runtime: {movie.runTime}</ListGroup.Item>
+              <ListGroup.Item variant = "secondary">Year: {movie.year}</ListGroup.Item>
+              <ListGroup.Item>Language: {movie.language}</ListGroup.Item>
+              <ListGroup.Item variant = "secondary">Rating: {movie.rated}</ListGroup.Item>
+              <ListGroup.Item>Metascore: {movie.metaScore}</ListGroup.Item>
+              <ListGroup.Item variant = "secondary">imdbRating: {movie.imdbRating}</ListGroup.Item>
+              <ListGroup.Item>Genre: {movie.genre}</ListGroup.Item>
+              <ListGroup.Item>{movie.plot}</ListGroup.Item>
               <Col>
                 <a
+                  className="movieLink"
                   href={parentsGuideURL}
                   target="_blank"
                   rel="noreferrer noopener"
@@ -98,6 +96,7 @@ export default function WatchListCard({ movie, setWatchListData }) {
               </Col>
               <Col>
                 <a
+                  className="movieLink"
                   href={commonSenseURL}
                   target="_blank"
                   rel="noreferrer noopener"
@@ -108,6 +107,7 @@ export default function WatchListCard({ movie, setWatchListData }) {
               </Col>
               <Col>
                 <a
+                  className="movieLink"
                   href={justWatchURL}
                   target="_blank"
                   rel="noreferrer noopener"

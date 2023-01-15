@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import WatchListCard from "./WatchListCard";
-import { toast } from "react-toastify";
 import "../Search/MovieCard.css"
 import "./Watchlist.css"
 
@@ -14,22 +13,10 @@ export default function WatchList() {
 
   useEffect(() => {
     const getWatchListData = () => {
-      if (userID == null) {
-        // If User ID is not defined, then don't call on database
-      } else { // If User ID is defined, call on database
-        axios
+      axios
         .get(`https://mwl-backend-v2.herokuapp.com/watchlist/${userID}`)
-        .then(res => res.json())
-        .then (data => {
-          if (data.result === false) {
-            // If no watchlist, then return toast "No Movies found"
-            toast.error("No Movies Found")
-          } else {
-            toast.success("Watchlist Found!")
-            setWatchListData(data);
-          }
-        })
-      }
+        .then(res => res.data)
+        .then(data => setWatchListData(data.information));
     };
 
     getWatchListData();
