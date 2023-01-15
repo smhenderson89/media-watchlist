@@ -39,6 +39,12 @@
   height: 1.5rem;
   width: auto
 }
+
+.addsymbol {
+  height: 1.5rem;
+  width: auto
+}
+
 /* Button CSS */
 .button-19 {
   appearance: button;

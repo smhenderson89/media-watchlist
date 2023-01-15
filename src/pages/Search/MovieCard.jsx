@@ -5,7 +5,7 @@ import imdblogo from "../../components/shared/images/imdb.png";
 import csmlogo from "../../components/shared/images/csm.png";
 import justwatch from "../../components/shared/images/justwatch-square.png";
 import "./MovieCard.css";
-import thumbsup from "./images/thumbsup.jpg";
+import addsymbol from "./images/addSymbol.png";
 import axios from "axios";
 import { toast } from "react-toastify";
 import imageNA from "../../components/shared/images/imageNA.png"
@@ -71,7 +71,7 @@ export default function MovieCard(props) {
       {/* copied this card syntax from react-bootstrap */}
       <Card className="movie-card" style={{ width: "15rem" }}>
         {/* using the the Poster variable defined from our prop deconstruction to reference a src="" for the image */}
-        <Card.Img class = "posterImage" src={Poster === "N/A" ? imageNA : Poster} />
+        <Card.Img class = "posterImage" onClick={() => setModalShow(true)} src={Poster === "N/A" ? imageNA : Poster} />
 
         <Card.Body>
           {/* calling the title and year of the movie, within this react-bootstrap card */}
@@ -93,7 +93,7 @@ export default function MovieCard(props) {
             className="button-19 m-2"
             onClick={() => getMovie(imdbID)}
           >
-            <Image className="thumbsup" src={thumbsup}></Image>
+            <Image className = "addsymbol" src = {addsymbol}></Image>
           </Button>
         </Card.Body>
       </Card>
@@ -149,7 +149,7 @@ export default function MovieCard(props) {
             className="button-19 m-2"
             onClick={() => getMovie(imdbID)}
           >
-            <Image className="thumbsup" src={thumbsup}></Image>
+          <Image className = "addsymbol" src = {addsymbol}></Image>
           </Button>
         </Modal.Footer>
       </Modal>
