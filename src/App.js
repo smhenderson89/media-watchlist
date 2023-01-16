@@ -12,6 +12,7 @@ import ToastNotification from "./components/shared/ToastNotification";
 import WatchListCard from "./pages/Watchlist/WatchListCard";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Logout from "./pages/Logout/Logout";
+// import BasicSpinner from "./components/shared/BasicSpinner";
 
 function App() {
   return (

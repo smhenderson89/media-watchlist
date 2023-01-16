@@ -19,7 +19,10 @@ function NavBar() {
               <Link className = "navLinks" to="/medialist">Search</Link>
               <Link className = "navLinks" to="/watchlist">Watchlist</Link>
               <Link className = "navLinks" to="/about">About</Link>
-              <Link className = "navLinks" to="/dashboard"><HiOutlineUser/></Link>
+              <Link className = "navLinks" to="/dashboard">
+                Test
+                <HiOutlineUser/>
+              </Link>
               <Navbar.Brand style={{ color: "#F9E45B" }}>{String(local.getItem("first")) && String(local.getItem("last")) === "null" ? (
                 // eslint-disable-next-line
                 <a>Welcome, Guest!</a> ) : (

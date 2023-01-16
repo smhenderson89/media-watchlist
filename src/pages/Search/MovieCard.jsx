@@ -34,15 +34,21 @@ export default function MovieCard(props) {
   const getMovie = imdbId => {
     const local = window.localStorage;
     let userID = local.getItem("userID");
-    axios
-      .get(`https://www.omdbapi.com/?i=${imdbId}&apikey=39132f6b`)
-      .then(res => {
-        axios.post(
-          `https://mwl-backend-v2.herokuapp.com/watchlist/${userID}`,
-          res.data
-        );
-      });
-    toast.success('Movie Added to WatchList!');
+    console.log('User ID is: ')
+    console.log(userID);
+    if (userID == null) {
+      toast.error('Register to add Movies to your Watchlist')
+    } else {
+      axios
+        .get(`https://www.omdbapi.com/?i=${imdbId}&apikey=39132f6b`)
+        .then(res => {
+          axios.post(
+            `https://mwl-backend-v2.herokuapp.com/watchlist/${userID}`,
+            res.data
+          );
+        });
+      toast.success('Movie Added to WatchList!');
+    }
   };
 
   const handleClose = () => setModalShow(false);
@@ -100,7 +106,7 @@ export default function MovieCard(props) {
       {modalShow && <Modal />}
 
       <Modal show={modalShow} onHide={handleClose}>
-        <Modal.Header style={{display: "flex", justifyContent : "center", alignItem : "center"}}closeButton>
+        <Modal.Header style={{display: "flex", justifyContent : "center", alignItem : "center"}} closeButton>
           <Modal.Title>{Title}</Modal.Title>
         </Modal.Header>
         <Row>

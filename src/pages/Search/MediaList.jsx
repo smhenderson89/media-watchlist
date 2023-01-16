@@ -2,17 +2,24 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Row, Button, Form } from "react-bootstrap";
 import MovieCard from "./MovieCard";
+// import Spinner from 'react-bootstrap/Spinner';
 import "./Search.css"
+import { toast } from "react-toastify";
 // eslint-disable-next-line
 const local = window.localStorage;
+// var loadingMessage = "Loading Movies"
 
 export default function MediaList() {
   const [apiData, setApiData] = useState([]); //initializing state to store movie data from our api call in an array
   const [inputValue, setInputValue] = useState(""); //initializing state to store user input value
+  const [loading, setLoading] = useState(false) // State for search loading message
+  const [noresults, setNoResults] = useState(false) // State for no movies found
 
-  const getMovies = async e => {
+  const getMovies = async e => { 
+    
     try {
       e.preventDefault();
+      setLoading(true) // Show Loading message while loading intial UseEffect
       const response = await axios.get(
         `https://www.omdbapi.com/?s=${inputValue}&apikey=39132f6b&type=movie`
       );
@@ -26,11 +33,17 @@ export default function MediaList() {
         });
 
         const detailedMovies = await Promise.all(moviesArray);
+        setLoading(false) // Change Loading message after API results have been called
         return detailedMovies;
       } else {
+        setLoading(false) // Stop loading if there is an error
+        setNoResults(true) // Show Error if no movies found
+        console.log('No Movies found')
+        toast.error('No Movies Found, Please Try A Different Serach')
         return [];
       }
     } catch (error) {
+      setLoading(false) // Stop loading if there is an error
       console.log(error);
       return [];
     }
@@ -48,6 +61,7 @@ export default function MediaList() {
   // getting default movies
   const getDefaultMovies = async () => {
     try {
+      setLoading(true) // Show Loading message while loading intial UseEffect
       const response = await axios.get(
         `https://www.omdbapi.com/?s=Toy+Story&apikey=39132f6b&type=movie`
       );
@@ -61,6 +75,7 @@ export default function MediaList() {
 
       const detailedMovies = await Promise.all(moviesArray);
       setApiData(detailedMovies);
+      setLoading(true) // Show Loading message while loading intial UseEffect
       return detailedMovies;
     } catch (error) {
       return [];
@@ -75,13 +90,26 @@ export default function MediaList() {
     <div>
         <Form className = "searchBar" onSubmit={handleSubmit}>
           {/* text input that has an event handler of onChange that runs the handleChange function defined on line 18 */}
-          <input value={inputValue} onChange={handleChange} type="text" />
+          <input value={inputValue} onChange={handleChange} placeholder="Toy Story" type="text" />
 
-          <Button className="button-19 m-2" type="submit">Search</Button>
+          <Button className="button-19 m-2" type="submit">
+            {/* <Spinner
+            as="span"
+            animation="border"
+            size="sm"
+            role="status"
+            aria-hidden="true"
+            /> */}
+            Search
+            </Button>
         </Form>
       <div className="movie-container">
-        {apiData.length === 0 ? (
-          <p className="error-message">Invalid Search Please Try Again</p>
+        {apiData.length === 0 ? 
+        (
+          <div>
+            <p className="error-message">{loading ? <> Searching...</> :<> </>}</p>
+            <p className="no-search-results">{noresults ? <> No Movies Found, Try Another Search</> : <> </>} </p>
+          </div>
         ) : (
           <Row>
             {apiData.map((movie, id) => {
