@@ -11,9 +11,11 @@ export default function WatchList() {
   // eslint-disable-next-line
   const userID = local.getItem("userID");
   const [watchListData, setWatchListData] = useState([]); //initializing state to store movie data from our api call in an array
+  const [loading, setLoading] = useState(false) // State for search loading message
 
   useEffect(() => {
     const getWatchListData = () => {
+      setLoading(true)
       if (userID == null) {
         // If User ID is not defined, then don't call on database
       } else { // If User ID is defined, call on database
@@ -25,6 +27,7 @@ export default function WatchList() {
             // If no watchlist, then return toast "No Movies found"
             toast.error("No Movies Found")
           } else {
+            setLoading(false)
             toast.success("Watchlist Loaded")
             setWatchListData(data.information);
           }
@@ -45,10 +48,13 @@ export default function WatchList() {
             <a id = "blueLink" href = "https://media-watch-list.herokuapp.com/login">Login</a> or create an <a id = "blueLink" href = "https://media-watch-list.herokuapp.com/login">account</a> to save movies to watchlist</div>
         </div>
       ) : (
+        <div>
         <h1>
           {String(local.getItem("first"))} {String(local.getItem("last"))}'s
           Media-Watchlist
         </h1>
+        <p className="error-message">{loading ? <> Loading...</> :<> </>}</p>
+        </div>
       )}
       <Row>
         {watchListData &&

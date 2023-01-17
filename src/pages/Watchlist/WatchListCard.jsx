@@ -6,7 +6,7 @@ import justwatch from "../../components/shared/images/justwatch-square.png";
 import axios from "axios";
 import "../Search/MovieCard.css";
 import { toast } from 'react-toastify';
-import { imageNA } from "../../components/shared/images/imageNA.png"
+import imageNA from "../../components/shared/images/imageNA.png"
 import "./WatchListCard.css";
 
 export default function WatchListCard({ movie, setWatchListData }) {
