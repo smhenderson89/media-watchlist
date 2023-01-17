@@ -19,14 +19,14 @@ export default function WatchList() {
       } else { // If User ID is defined, call on database
         axios
         .get(`https://mwl-backend-v2.herokuapp.com/watchlist/${userID}`)
-        .then(res => res.json())
+        .then(res => res.data)
         .then (data => {
           if (data.result === false) {
             // If no watchlist, then return toast "No Movies found"
             toast.error("No Movies Found")
           } else {
-            toast.success("Watchlist Found!")
-            setWatchListData(data);
+            toast.success("Watchlist Loaded")
+            setWatchListData(data.information);
           }
         })
       }

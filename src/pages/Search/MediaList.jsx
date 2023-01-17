@@ -107,7 +107,7 @@ export default function MediaList() {
         {apiData.length === 0 ? 
         (
           <div>
-            <p className="error-message">{loading ? <> Searching...</> :<> </>}</p>
+            <p className="error-message">{loading ? <> Loading...</> :<> </>}</p>
             <p className="no-search-results">{noresults ? <> No Movies Found, Try Another Search</> : <> </>} </p>
           </div>
         ) : (

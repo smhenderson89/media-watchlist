@@ -5,8 +5,13 @@ import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { HiOutlineUser } from "react-icons/hi";
 
+const local = window.localStorage;
+// eslint-disable-next-line
+const userID = local.getItem("userID");
+// const [name, setName] = useState([]) // Initalize Username information
+
+
 function NavBar() {
-  const local = window.localStorage;
 
   return (
     <Navbar style={{ backgroundColor: "#1B4D89" }} collapseOnSelect expand="md" fixed = "top">
@@ -20,7 +25,6 @@ function NavBar() {
               <Link className = "navLinks" to="/watchlist">Watchlist</Link>
               <Link className = "navLinks" to="/about">About</Link>
               <Link className = "navLinks" to="/dashboard">
-                Test
                 <HiOutlineUser/>
               </Link>
               <Navbar.Brand style={{ color: "#F9E45B" }}>{String(local.getItem("first")) && String(local.getItem("last")) === "null" ? (
