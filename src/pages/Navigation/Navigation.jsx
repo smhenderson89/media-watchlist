@@ -8,6 +8,8 @@ import { HiOutlineUser } from "react-icons/hi";
 const local = window.localStorage;
 // eslint-disable-next-line
 const userID = local.getItem("userID");
+// const displayInfo = useContext(profileInfo)
+
 // const [name, setName] = useState([]) // Initalize Username information
 
 
@@ -27,11 +29,12 @@ function NavBar() {
               <Link className = "navLinks" to="/dashboard">
                 <HiOutlineUser/>
               </Link>
-              <Navbar.Brand style={{ color: "#F9E45B" }}>{String(local.getItem("first")) && String(local.getItem("last")) === "null" ? (
-                // eslint-disable-next-line
-                <a>Welcome, Guest!</a> ) : (
-                // eslint-disable-next-line
-                <a>Welcome, {String(local.getItem("first"))} {String(local.getItem("last"))}!</a>)}</Navbar.Brand>
+              <Navbar.Brand style={{ color: "#F9E45B" }}>
+                {String(local.getItem("first")) && String(local.getItem("last")) === "null" ? (
+                  // eslint-disable-next-line
+                  <a>Welcome, Guest!</a> ) : (
+                  // eslint-disable-next-line
+                  <a>Welcome, {String(local.getItem("first"))} {String(local.getItem("last"))}!</a>)}</Navbar.Brand>
             </Nav>
           </Container>
         </Navbar.Collapse>
