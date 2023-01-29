@@ -21,8 +21,8 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#example-usage">Example Usage</a></li>
+        <li><a href="#running-local">Running Local</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -45,10 +45,10 @@ Media Watch List is a website that **aggregates information from movie databases
 
 We use data from:
 
-[OPEN IMDB](https://www.omdbapi.com/) - an open source version of the IMDB Database
-[IMDB - Parent's Guide](https://www.imdb.com/title/tt0114709/parentalguide) - A summary of each movie's categories, ranging from Sex & Nudity, Violence and Gore, Profanity, etc
-[Common Sense Media](https://www.commonsensemedia.org/) - Reviews of Movies for suitablity for children
-[JustWatch] - Find which service to stream or buy the movie
+[OPEN IMDB](https://www.omdbapi.com/) - an open source version of the IMDB Database<br>
+[IMDB - Parent's Guide](https://www.imdb.com/title/tt0114709/parentalguide) - A summary of each movie's categories, ranging from Sex & Nudity, Violence and Gore, Profanity, etc<br>
+[Common Sense Media](https://www.commonsensemedia.org/) - Reviews of Movies for suitablity for children<br>
+[JustWatch](https://www.justwatch.com/) - Find which service to stream or buy the movie<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -72,7 +72,16 @@ Back End
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-## Getting Started
+
+## Example Usage
+
+Logging into the app 
+![image](https://user-images.githubusercontent.com/53064568/215358847-695524e2-c71b-416f-b70c-13996a2df952.png)
+
+
+
+
+## Running Local
 
 To get a local copy up and running follow these simple example steps.
 
