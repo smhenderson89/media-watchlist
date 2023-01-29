@@ -124,12 +124,12 @@ function checkRegistration() {
         <Button className="button-19 m-2" block size="md" type="submit" onClick={checkLogin}>
           Login
         </Button>
-        <Button className="button-19 m-2" onClick={(e) => {
+        {/* <Button className="button-19 m-2" onClick={(e) => {
               e.preventDefault();
               window.location.href='https://mwl-backend-v2.herokuapp.com/auth/github';
               }} block size="lg" type="submit">
                 Github Login 
-              </Button>
+              </Button> */}
         {/* <Button className="button-19 m-2" onClick={(e) => {
               e.preventDefault();
               window.location.href='https://mwl-backend-v2.herokuapp.com/auth/google';
