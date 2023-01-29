@@ -197,12 +197,12 @@ function checkRegistration() {
         <Button className="button-19 m-2" block size="lg" type="submit" onClick={checkRegistration}>
           Sign Up
         </Button>
-        <Button className="button-19 m-2" onClick={(e) => {
+        {/* <Button className="button-19 m-2" onClick={(e) => {
               e.preventDefault();
               window.location.href='https://mwl-backend-v2.herokuapp.com/auth/github';
               }} block size="lg" type="submit">
                 Github Signup 
-              </Button>
+              </Button> */}
         {/* <Button className="button-19 m-2" onClick={(e) => {
               e.preventDefault();
               window.location.href='https://mwl-backend-v2.herokuapp.com/auth/google';
