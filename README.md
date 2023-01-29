@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Project Inspiration
 
-![mwl_logo](https://user-images.githubusercontent.com/53064568/146559008-9a81f32e-3a23-426a-8dc5-49e3379bd13b.jpeg)https://media-watch-list.herokuapp.com/
+![mwl_logo](https://user-images.githubusercontent.com/53064568/146559008-9a81f32e-3a23-426a-8dc5-49e3379bd13b.jpeg)
 
 Tired of your kid Cars 3 for the 100th time? Excited about the newest Marvel release but not sure it is appropriate for you kid? 
 
