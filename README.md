@@ -36,8 +36,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Project Inspiration
-
-![mwl_logo](https://user-images.githubusercontent.com/53064568/146559008-9a81f32e-3a23-426a-8dc5-49e3379bd13b.jpeg)
+<div align="center">
+ <img src="https://user-images.githubusercontent.com/53064568/146559008-9a81f32e-3a23-426a-8dc5-49e3379bd13b.jpeg" alt = "Media Watch List Logo" />
+</div>
 
 Tired of your kid Cars 3 for the 100th time? Excited about the newest Marvel release but not sure it is appropriate for you kid? 
 
@@ -75,11 +76,57 @@ Back End
 
 ## Example Usage
 
-Logging into the app 
+<div align="center">Logging into the app</div>
 ![image](https://user-images.githubusercontent.com/53064568/215358847-695524e2-c71b-416f-b70c-13996a2df952.png)
+<br>
+<div align="center">Register an account</div>
+<br>
+![image](https://user-images.githubusercontent.com/53064568/215360667-7324be2d-a265-45f8-8445-9cfa40de154b.png)
+<br>
+
+Once logged in, you can search details for movies (By default the websites searches for Toy Story)
+![image](https://user-images.githubusercontent.com/53064568/215360710-7a4a8649-4b31-41d8-95bb-6a138fbf1553.png)<br>
+
+Searching for "The Matrix" will update the results without through React without reloading the page
+![image](https://user-images.githubusercontent.com/53064568/215360753-69fdfb4d-cc9b-4a75-b8b6-b41520b0e8b7.png)
+<br>
+<div align="center">Clicking the "+" sign will add the movie to your watchlist</div>
+
+![image](https://user-images.githubusercontent.com/53064568/215360856-2715731b-5f42-43f1-87e8-ad61df4630a6.png)
 
 
+Click "More Info" to find out more about the movie
+![image](https://user-images.githubusercontent.com/53064568/215360877-763b55cc-85bf-4c21-8988-bd7663dcbebe.png)
 
+Within the "More Info" page, you can find movie information, and links to the IMDB Parents Guide, Common Sense Media, and where to Stream the Movie
+![image](https://user-images.githubusercontent.com/53064568/215360931-3d487231-791b-4687-b253-1ca157ca6dc2.png)
+
+Click each of those Links will open up a seperate tab with the information from the services
+
+IMDB Parents Guide
+![image](https://user-images.githubusercontent.com/53064568/215360966-0cd5ad23-94e9-45f1-8446-8725d1626314.png)
+
+Common Sense Media 
+![image](https://user-images.githubusercontent.com/53064568/215360977-b696843b-400a-49da-8cbe-59664b29edf7.png)
+
+JustWatch - Where to stream it
+![image](https://user-images.githubusercontent.com/53064568/215361005-e7d0e7ae-94c2-42fa-9675-47b3b1ae536a.png)
+
+Go to your Watchlist to see a your saved movies
+![image](https://user-images.githubusercontent.com/53064568/215361191-7c9dcda0-dfb1-45ea-b24d-5c88399c3c8d.png)
+
+Click "Delete" to remove the movie from your watchlist when you no longer need it
+![image](https://user-images.githubusercontent.com/53064568/215361209-46f4e345-14d0-4b00-ae24-cb6f7470980c.png)
+
+Click the Person Icon to Go to your account page 
+![image](https://user-images.githubusercontent.com/53064568/215361237-ec0f049b-0a3a-489d-9ff7-324f0ed6e2fa.png)
+
+Here you can Update your email or password, or logout.
+![image](https://user-images.githubusercontent.com/53064568/215361257-ac999295-94a8-45d0-9470-dd27a4ad7b22.png)
+
+Click the logout when you are done with the website. Thanks for using it!
+![image](https://user-images.githubusercontent.com/53064568/215361271-2d4c375d-554c-4bc2-bb5b-ce3bd85015d9.png)
+</div>
 
 ## Running Local
 
