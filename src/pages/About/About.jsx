@@ -22,6 +22,9 @@ function About() {
             information such as ratings before showing their child a new movie. No more scrolling endlessly through various notes in your note app to remember 
             where you stashed recommendations from friends, you can save your movies in an organized and informative way using our website.
             </div>
+            <div>
+                For more information, visit the <a href = "https://github.com/smhenderson89/media-watchlist">ReadME File</a> on the github page
+            </div>
 
         </Container>
         <Container className ="profileCard">
