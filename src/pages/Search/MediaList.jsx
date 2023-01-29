@@ -2,12 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Row, Button, Form } from "react-bootstrap";
 import MovieCard from "./MovieCard";
-// import Spinner from 'react-bootstrap/Spinner';
 import "./Search.css"
 import { toast } from "react-toastify";
 // eslint-disable-next-line
-const local = window.localStorage;
-// var loadingMessage = "Loading Movies"
 
 export default function MediaList() {
   const [apiData, setApiData] = useState([]); //initializing state to store movie data from our api call in an array
@@ -38,7 +35,7 @@ export default function MediaList() {
       } else {
         setLoading(false) // Stop loading if there is an error
         setNoResults(true) // Show Error if no movies found
-        console.log('No Movies found')
+        // console.log('No Movies found')
         toast.error('No Movies Found, Please Try A Different Serach')
         return [];
       }
@@ -93,13 +90,6 @@ export default function MediaList() {
           <input value={inputValue} onChange={handleChange} placeholder="Toy Story" type="text" />
 
           <Button className="button-19 m-2" type="submit">
-            {/* <Spinner
-            as="span"
-            animation="border"
-            size="sm"
-            role="status"
-            aria-hidden="true"
-            /> */}
             Search
             </Button>
         </Form>

@@ -24,13 +24,16 @@ export default function WatchList() {
         .then(res => res.data)
         .then (data => {
           if (data.result === false) {
+            setLoading(false)
             // If no watchlist, then return toast "No Movies found"
             toast.error("No Movies Found")
           } else {
             setLoading(false)
             toast.success("Watchlist Loaded")
             setWatchListData(data.information);
-          }
+          }})
+          .catch(function(err) {
+            console.log(err);
         })
       }
     };

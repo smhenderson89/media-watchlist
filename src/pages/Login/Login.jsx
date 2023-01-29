@@ -1,8 +1,5 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Image from 'react-bootstrap/Image';
-import Modal from "react-bootstrap/Modal";
+import {Form, Button, Image, Modal} from "react-bootstrap";
 import "./Login.css";
 import { useNavigate } from "react-router";
 import { toast } from 'react-toastify';
@@ -33,7 +30,6 @@ function checkLogin() {
           password: newPassword})
   }).then (res => res.json())
   .then (data => {
-      //console.log(data.login);
       if (data.login) {
         // Set data from backend storage into the front end Session Storage
         localStorage.setItem("userID",data.session.userid)
@@ -41,6 +37,12 @@ function checkLogin() {
         localStorage.setItem("last",data.session.last)
         localStorage.setItem("email",data.session.email)
         localStorage.setItem("login",data.session.loggedIn)
+        console.log('User Logged in!')
+        var profileInfo = {
+          'first' : data.session.first,
+          'last' : data.session.last
+        }
+        console.log(JSON.stringify(profileInfo));
         toast.success('🦄 Login Successful!');
         navigate('/medialist');
       } else {
