@@ -41,17 +41,33 @@
 
 Tired of your kid Cars 3 for the 100th time? Excited about the newest Marvel release but not sure it is appropriate for you kid? 
 
-Media Watch List is a website that aggregates information from movie databases for a user to easily like or add a movie to a watchlist. The market for our project is specifically parents of young children, who need an easy way to save movie recommendations and review relevant information such as ratings before showing their child a new movie. No more scrolling endlessly through various notes in your note app to remember where you stashed recommendations from friends, you can save your movies in an organized and informative way using our website.
+Media Watch List is a website that **aggregates information from movie databases** for a user to easily like or add a movie to a watchlist. The market for our project is specifically **parents of young children**, who need an **easy way to save movie recommendations** and find **relevant information** before showing their child a new movie. No more scrolling endlessly through various notes in your note app to remember where you stashed recommendations from friends, you can save your movies in an organized and informative way using our website.
+
+We use data from:
+
+[OPEN IMDB](https://www.omdbapi.com/) - an open source version of the IMDB Database
+[IMDB - Parent's Guide](https://www.imdb.com/title/tt0114709/parentalguide) - A summary of each movie's categories, ranging from Sex & Nudity, Violence and Gore, Profanity, etc
+[Common Sense Media](https://www.commonsensemedia.org/) - Reviews of Movies for suitablity for children
+[JustWatch] - Find which service to stream or buy the movie
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
+
+Front End 
 
 * [React.js](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
 * [Bootstrap](https://getbootstrap.com)
 * [React Icons](https://react-icons.github.io/react-icons/)
 * [Open IMDB](http://www.omdbapi.com/)
+
+Back End
+
+* [Express](https://expressjs.com/)
+* [Sequelize](https://sequelize.org/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [bcrypt](https://www.npmjs.com/package/bcrypt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -90,7 +106,6 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- USAGE EXAMPLES -->
 
 
@@ -98,6 +113,7 @@ _Below is an example of how you can instruct your audience on installing and set
 ## Roadmap
 
 - [ ] **Stretch Goal:** Add aditional media types - books, music, app
+- [ ] **Stretch Goal:** Add additional ways to login to webiste (Gmail)
 
 See the [open issues](https://github.com/smhenderson89/media-watchlist) for a full list of proposed features (and known issues).
 
@@ -110,6 +126,8 @@ See the [open issues](https://github.com/smhenderson89/media-watchlist) for a fu
 
 Scott Henderson
 Github: [https://github.com/smhenderson89](https://github.com/smhenderson89)
+LinkedIN: [https://www.linkedin.com/in/scottmchenderson/](https://www.linkedin.com/in/scottmchenderson/)
+Portfolio: [https://scotthenderson.netlify.app/](https://scotthenderson.netlify.app/)
 
 Julia Szymanski
 Github: [https://github.com/julszymanski](https://github.com/julszymanski)
@@ -126,7 +144,7 @@ Github: [https://github.com/mwoolf87](https://github.com/mwoolf87)
 ## Acknowledgments
 
 * The DigitalCrafts Teachers and Teaching Assistants
-* FreeIcons: [https://www.freeiconspng.com/](Link)
+* Free Icons: [https://www.freeiconspng.com/](Link)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
