@@ -76,29 +76,42 @@ Back End
 
 ## Example Usage
 
-<div align="center">Logging into the app</div>
-![image](https://user-images.githubusercontent.com/53064568/215358847-695524e2-c71b-416f-b70c-13996a2df952.png)
-<br>
-<div align="center">Register an account</div>
-<br>
+<div align="center">Logging into the app
+
+![image](https://user-images.githubusercontent.com/53064568/215614941-4544303a-b5fc-4218-85b8-0cb229716d35.png)
+
+Register an account
+
+
 ![image](https://user-images.githubusercontent.com/53064568/215360667-7324be2d-a265-45f8-8445-9cfa40de154b.png)
-<br>
+
 
 Once logged in, you can search details for movies (By default the websites searches for Toy Story)
+
 ![image](https://user-images.githubusercontent.com/53064568/215360710-7a4a8649-4b31-41d8-95bb-6a138fbf1553.png)<br>
 
 Searching for "The Matrix" will update the results without through React without reloading the page
+
 ![image](https://user-images.githubusercontent.com/53064568/215360753-69fdfb4d-cc9b-4a75-b8b6-b41520b0e8b7.png)
+
 <br>
-<div align="center">Clicking the "+" sign will add the movie to your watchlist</div>
 
-![image](https://user-images.githubusercontent.com/53064568/215360856-2715731b-5f42-43f1-87e8-ad61df4630a6.png)
+Clicking the "+" sign will add the movie to your watchlist
 
+![0F9AF5C7-98E8-467F-9C5B-8DB07AD03D4F_4_5005_c](https://user-images.githubusercontent.com/53064568/215615983-17c1c376-2dcb-42fc-9d56-2c624c4edeea.jpeg)
+
+<br>
 
 Click "More Info" to find out more about the movie
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/53064568/215360877-763b55cc-85bf-4c21-8988-bd7663dcbebe.png)
 
 Within the "More Info" page, you can find movie information, and links to the IMDB Parents Guide, Common Sense Media, and where to Stream the Movie
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/53064568/215360931-3d487231-791b-4687-b253-1ca157ca6dc2.png)
 
 Click each of those Links will open up a seperate tab with the information from the services
@@ -115,10 +128,18 @@ JustWatch - Where to stream it
 Go to your Watchlist to see a your saved movies
 ![image](https://user-images.githubusercontent.com/53064568/215361191-7c9dcda0-dfb1-45ea-b24d-5c88399c3c8d.png)
 
+<br>
+
 Click "Delete" to remove the movie from your watchlist when you no longer need it
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/53064568/215361209-46f4e345-14d0-4b00-ae24-cb6f7470980c.png)
 
 Click the Person Icon to Go to your account page 
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/53064568/215361237-ec0f049b-0a3a-489d-9ff7-324f0ed6e2fa.png)
 
 Here you can Update your email or password, or logout.
@@ -127,6 +148,8 @@ Here you can Update your email or password, or logout.
 Click the logout when you are done with the website. Thanks for using it!
 ![image](https://user-images.githubusercontent.com/53064568/215361271-2d4c375d-554c-4bc2-bb5b-ce3bd85015d9.png)
 </div>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Running Local
 
@@ -137,7 +160,8 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install npm@latest -g!
+
   ```
 
 ### Installation
@@ -179,9 +203,9 @@ See the [open issues](https://github.com/smhenderson89/media-watchlist) for a fu
 ## Contact
 
 Scott Henderson
-Github: [https://github.com/smhenderson89](https://github.com/smhenderson89)
-LinkedIN: [https://www.linkedin.com/in/scottmchenderson/](https://www.linkedin.com/in/scottmchenderson/)
-Portfolio: [https://scotthenderson.netlify.app/](https://scotthenderson.netlify.app/)
+<br>Github: [https://github.com/smhenderson89](https://github.com/smhenderson89)
+<br>LinkedIN: [https://www.linkedin.com/in/scottmchenderson/](https://www.linkedin.com/in/scottmchenderson/)
+<br>Portfolio: [https://scotthenderson.netlify.app/](https://scotthenderson.netlify.app/)
 
 Julia Szymanski
 Github: [https://github.com/julszymanski](https://github.com/julszymanski)
