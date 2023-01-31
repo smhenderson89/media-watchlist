@@ -35,7 +35,6 @@ export default function MediaList() {
       } else {
         setLoading(false) // Stop loading if there is an error
         setNoResults(true) // Show Error if no movies found
-        // console.log('No Movies found')
         toast.error('No Movies Found, Please Try A Different Serach')
         return [];
       }
