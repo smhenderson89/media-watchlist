@@ -14,17 +14,17 @@ export default function MediaList() {
 
   const getMovies = async e => { 
     try {
-      console.log(process.env.REACT_APP_API_KEY);
-      console.log('test log');
+      // console.log(process.env.REACT_APP_API_KEY);
+      // console.log('test log');
       e.preventDefault();
       setLoading(true) // Show Loading message while loading intial UseEffect
       const response = await axios.get(
-        `https://www.omdbapi.com/?s=${inputValue}&apikey=39132f6b&type=movie`
+        `https://www.omdbapi.com/?s=${inputValue}&apikey=${process.env.REACT_APP_API_KEY}&type=movie`
       );
       if (response.data.Search) {
         const moviesArray = response.data.Search.map(async movie => {
           const detailedRes = await axios.get(
-            `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=39132f6b&type=movie`
+            `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${process.env.REACT_APP_API_KEY}39132f6b&type=movie`
           );
 
           return Promise.resolve(detailedRes.data);
@@ -60,11 +60,11 @@ export default function MediaList() {
     try {
       setLoading(true) // Show Loading message while loading intial UseEffect
       const response = await axios.get(
-        `https://www.omdbapi.com/?s=Toy+Story&apikey=39132f6b&type=movie`
+        `https://www.omdbapi.com/?s=Toy+Story&apikey=${process.env.REACT_APP_API_KEY}&type=movie`
       );
       const moviesArray = response.data.Search.map(async movie => {
         const detailedRes = await axios.get(
-          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=39132f6b`
+          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${process.env.REACT_APP_API_KEY}`
         );
 
         return Promise.resolve(detailedRes.data);
