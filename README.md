@@ -18,13 +18,8 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#example-usage">Example Usage</a></li>
-        <li><a href="#running-local">Running Local</a></li>
-      </ul>
-    </li>
+    <li><a href="#example-usage">Example Usage</a></li>
+    <li><a href="#running-local">Running Local</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -73,11 +68,7 @@ Back End
 
 <!-- GETTING STARTED -->
 
-## Getting Started
-
-### Example Usage
-
-
+## Example Usage
 
 <div align="center">Logging into the app
 
