@@ -25,9 +25,8 @@
         <li><a href="#running-local">Running Local</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -35,7 +34,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Project Inspiration
+## About the Project
 <div align="center">
  <img src="https://user-images.githubusercontent.com/53064568/146559008-9a81f32e-3a23-426a-8dc5-49e3379bd13b.jpeg" alt = "Media Watch List Logo" />
 </div>
@@ -74,7 +73,11 @@ Back End
 
 <!-- GETTING STARTED -->
 
-## Example Usage
+## Getting Started
+
+### Example Usage
+
+
 
 <div align="center">Logging into the app
 
@@ -184,9 +187,6 @@ This is an example of how to list things you need to use the software and how to
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- USAGE EXAMPLES -->
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -208,10 +208,10 @@ Scott Henderson
 <br>Portfolio: [https://scotthenderson.netlify.app/](https://scotthenderson.netlify.app/)
 
 Julia Szymanski
-Github: [https://github.com/julszymanski](https://github.com/julszymanski)
+<br>Github: [https://github.com/julszymanski](https://github.com/julszymanski)<br>
 
 Mike Woolf
-Github: [https://github.com/mwoolf87](https://github.com/mwoolf87)
+<br>Github: [https://github.com/mwoolf87](https://github.com/mwoolf87)<br>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
