@@ -24,7 +24,7 @@ export default function MediaList() {
       if (response.data.Search) {
         const moviesArray = response.data.Search.map(async movie => {
           const detailedRes = await axios.get(
-            `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${process.env.REACT_APP_API_KEY}39132f6b&type=movie`
+            `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${process.env.REACT_APP_API_KEY}&type=movie`
           );
 
           return Promise.resolve(detailedRes.data);
