@@ -171,8 +171,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 4. Enter your API in `MediaList.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
-   const API_ID = 'ENTER YOUR KEY';
+   process.env.REACT_APP_API_KEY = 'ENTER YOUR API';
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
