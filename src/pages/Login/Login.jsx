@@ -38,11 +38,6 @@ function checkLogin() {
         localStorage.setItem("email",data.session.email)
         localStorage.setItem("login",data.session.loggedIn)
         console.log('User Logged in!')
-        var profileInfo = {
-          'first' : data.session.first,
-          'last' : data.session.last
-        }
-        console.log(JSON.stringify(profileInfo));
         toast.success('🦄 Login Successful!');
         navigate('/medialist');
       } else {
