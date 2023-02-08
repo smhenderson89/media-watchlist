@@ -6,12 +6,10 @@ localStorage.setItem("UserName", "");
 const { user } = useAuth0();
 const { email } = user;
 
-console.log(email);
+// console.log(email);
 
-useEffect(() => {
-    console.log("useEffect")(async function () {
+useEffect(() => {(async function () {
         const urlString = "https://mwl-backend-v2.herokuapp.com/users/" + email;
-        console.log(email);
         await fetch(urlString, {
             method: "GET",
             headers: {
