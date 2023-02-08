@@ -14,8 +14,8 @@ export default function MediaList() {
 
   const getMovies = async e => { 
     try {
-      // console.log(process.env.REACT_APP_API_KEY);
-      // console.log('test log');
+      console.log(process.env.REACT_APP_API_KEY);
+      console.log('test log');
       e.preventDefault();
       setLoading(true) // Show Loading message while loading intial UseEffect
       const response = await axios.get(
