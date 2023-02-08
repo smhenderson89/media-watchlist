@@ -58,7 +58,7 @@ function Dashboard() {
         }
       })
       .catch(function(err) {
-        console.log('Update Password error', err);
+        // console.log('Update Password error', err);
       });
   }
 

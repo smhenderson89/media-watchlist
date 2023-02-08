@@ -37,7 +37,7 @@ function checkLogin() {
         localStorage.setItem("last",data.session.last)
         localStorage.setItem("email",data.session.email)
         localStorage.setItem("login",data.session.loggedIn)
-        console.log('User Logged in!')
+        // console.log('User Logged in!')
         toast.success('🦄 Login Successful!');
         navigate('/medialist');
       } else {
@@ -46,7 +46,7 @@ function checkLogin() {
       // showAlert(data)
   })
   .catch(function (err) {
-      console.log('something went wrong, call on database', err); // console.log the errors if any
+      // console.log('something went wrong, call on database', err); // console.log the errors if any
   });
 }
 
@@ -79,7 +79,7 @@ function checkRegistration() {
       // showAlert(data)
   })
   .catch(function (err) {
-      console.log('something went wrong, call on database', err); // console.log the errors if any
+      // console.log('something went wrong, call on database', err); // 
   });
 }
 
