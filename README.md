@@ -42,7 +42,7 @@ We use data from:
 
 [OPEN IMDB](https://www.omdbapi.com/) - an open source version of the IMDB Database<br>
 [IMDB - Parent's Guide](https://www.imdb.com/title/tt0114709/parentalguide) - A summary of each movie's categories, ranging from Sex & Nudity, Violence and Gore, Profanity, etc<br>
-[Common Sense Media](https://www.commonsensemedia.org/) - Reviews of Movies for suitablity for children<br>
+[Common Sense Media](https://www.commonsensemedia.org/) - Reviews of Movies for suitability for children<br>
 [JustWatch](https://www.justwatch.com/) - Find which service to stream or buy the movie<br>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
