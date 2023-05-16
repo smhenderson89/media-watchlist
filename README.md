@@ -102,13 +102,13 @@ Click "More Info" to find out more about the movie
 
 ![image](https://user-images.githubusercontent.com/53064568/215360877-763b55cc-85bf-4c21-8988-bd7663dcbebe.png)
 
-Within the "More Info" page, you can find movie information, and links to the IMDB Parents Guide, Common Sense Media, and where to Stream the Movie
+Within the "More Info" page, you can find movie information, and links to the IMDB Parents Guide, Common Sense Media, and where to stream the movie
 
 <br>
 
 ![image](https://user-images.githubusercontent.com/53064568/215360931-3d487231-791b-4687-b253-1ca157ca6dc2.png)
 
-Click each of those Links will open up a seperate tab with the information from the services
+Click each of those links will open up a separate tab with the information from the services
 
 IMDB Parents Guide
 ![image](https://user-images.githubusercontent.com/53064568/215360966-0cd5ad23-94e9-45f1-8446-8725d1626314.png)
@@ -124,7 +124,7 @@ Go to your Watchlist to see a your saved movies
 
 <br>
 
-Click "Delete" to remove the movie from your watchlist when you no longer need it
+Click "Delete" to remove the movie from your watchlist when you no longer need it.
 
 <br>
 
@@ -180,8 +180,8 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] **Stretch Goal:** Add aditional media types - books, music, app
-- [ ] **Stretch Goal:** Add additional ways to login to webiste (Gmail)
+- [ ] **Stretch Goal:** Add additional media types - books, music, app
+- [ ] **Stretch Goal:** Add additional ways to login to website (Gmail)
 
 See the [open issues](https://github.com/smhenderson89/media-watchlist) for a full list of proposed features (and known issues).
 
