@@ -19,6 +19,7 @@ export default function WatchList() {
     const getWatchListData = () => {
       setLoading(true)
       if (userID == null) {
+        // eslint-disable-next-line
         // If User ID is not defined, then don't call on database
       } else { // If User ID is defined, call on database
         axios
