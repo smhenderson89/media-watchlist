@@ -10,6 +10,7 @@ export default function WatchList() {
   const local = window.localStorage;
   // eslint-disable-next-line
   const userID = local.getItem("userID");
+  // eslint-disable-next-line
   const [watchListData, setWatchListData] = useState([]); //initializing state to store movie data from our api call in an array
   const [loading, setLoading] = useState(false) // State for search loading message
 
@@ -39,7 +40,7 @@ export default function WatchList() {
     };
 
     getWatchListData();
-  }, []);
+  }, [userID]);
 
   return (
     <div>
