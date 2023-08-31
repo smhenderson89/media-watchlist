@@ -34,7 +34,6 @@ export default function WatchList() {
             setWatchListData(data.information);
           }})
           .catch(function(err) {
-            // console.log(err);
         })
       }
     };
