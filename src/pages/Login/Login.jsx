@@ -72,6 +72,29 @@ function checkLogin() {
 //   });
 // }
 
+function checkRedirect() {
+  fetch('https://mwl-backend-v2.herokuapp.com/auth/verify', {
+    method: "GET",
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+  }).then (res => res.json())
+  .then (data => {
+      // console.log(data.registration);
+      if (data.result) {
+        console.log(data)
+        toast.success('🦄 Login Successful!');
+      } else {
+        console.log('fail error');
+      }
+      // showAlert(data)
+  })
+  .catch(function (err) {
+      // console.log('something went wrong, call on database', err); // 
+  });
+}
+
 function checkRegistration() {
   fetch('https://mwl-backend-v2.herokuapp.com/login/register', {
       method: "POST",
@@ -141,8 +164,13 @@ function checkRegistration() {
         <Button className="button-19 m-2" block size="md" type="submit" onClick={checkLogin}>
           Login
         </Button>
+        <Button className="button-19 m-2" onClick = {checkRedirect}>Test Redirect</Button>
         {/* DEBUG: DEV http://localhost:4000/auth/google/callback
-        ACTUAL SITE: https://mwl-backend-v2.herokuapp.com/auth/google */}
+        ACTUAL SITE: https://mwl-backend-v2.herokuapp.com/auth/google 
+        
+        Passport link must be href
+        
+        */}
         <a href = "https://mwl-backend-v2.herokuapp.com/auth/google">
         <Button className="button-20 m-2" block size = "lg">
             <FcGoogle /> Login with Google 
