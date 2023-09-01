@@ -49,11 +49,12 @@ function checkLogin() {
 
 function googleLogin() {
   fetch('https://mwl-backend-v2.herokuapp.com/auth/google', {
-      method: "GRET",
+      method: "GET",
       headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
-      }
+      },
+      mode: "no-cors"
   }).then (res => res.json())
   .then (data => {
     if (data.login) {
