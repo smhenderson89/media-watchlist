@@ -47,34 +47,30 @@ function checkLogin() {
   });
 }
 
-function googleLogin() {
-  fetch('https://mwl-backend-v2.herokuapp.com/auth/google', {
-      method: "GET",
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      mode: "no-cors"
-  }).then (res => res.json())
-  .then (data => {
-    if (data.login) {
-      // Set data from backend storage into the front end Session Storage
-      localStorage.setItem("userID",data.session.userid)
-      localStorage.setItem("first",data.session.first)
-      localStorage.setItem("last",data.session.last)
-      localStorage.setItem("email",data.session.email)
-      localStorage.setItem("login",data.session.loggedIn)
-      toast.success('🦄 Login Successful!');
-      navigate('/medialist');
-    } else {
-      toast.error('Login Unsuccessful');
-    }
-    // showAlert(data)
-  })
-  .catch(function (err) {
-      // console.log('something went wrong, call on database', err); // console.log the errors if any
-  });
-}
+// function googleLogin() {
+//   fetch('https://mwl-backend-v2.herokuapp.com/auth/google', {
+//       method: "GET",
+//       mode : "cors"
+//   }).then (res => res.json())
+//   .then (data => {
+//     if (data.login) {
+//       // Set data from backend storage into the front end Session Storage
+//       // localStorage.setItem("userID",data.session.userid)
+//       // localStorage.setItem("first",data.session.first)
+//       // localStorage.setItem("last",data.session.last)
+//       // localStorage.setItem("email",data.session.email)
+//       // localStorage.setItem("login",data.session.loggedIn)
+//       toast.success('🦄 Login Successful!');
+//       navigate('/medialist');
+//     } else {
+//       toast.error('Login Unsuccessful');
+//     }
+//     // showAlert(data)
+//   })
+//   .catch(function (err) {
+//       // console.log('something went wrong, call on database', err); // console.log the errors if any
+//   });
+// }
 
 function checkRegistration() {
   fetch('https://mwl-backend-v2.herokuapp.com/login/register', {
@@ -147,9 +143,11 @@ function checkRegistration() {
         </Button>
         {/* DEBUG: DEV http://localhost:4000/auth/google/callback
         ACTUAL SITE: https://mwl-backend-v2.herokuapp.com/auth/google */}
-        <Button className="button-20 m-2" block size = "lg" type = "submit" onClick={googleLogin}>
+        <a href = "https://mwl-backend-v2.herokuapp.com/auth/google">
+        <Button className="button-20 m-2" block size = "lg">
             <FcGoogle /> Login with Google 
         </Button>
+        </a>
       </Form>
     </div>
         </Modal.Body>
