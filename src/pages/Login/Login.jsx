@@ -47,30 +47,9 @@ function checkLogin() {
   });
 }
 
-// function googleLogin() {
-//   fetch('https://mwl-backend-v2.herokuapp.com/auth/google', {
-//       method: "GET",
-//       mode : "cors"
-//   }).then (res => res.json())
-//   .then (data => {
-//     if (data.login) {
-//       // Set data from backend storage into the front end Session Storage
-//       // localStorage.setItem("userID",data.session.userid)
-//       // localStorage.setItem("first",data.session.first)
-//       // localStorage.setItem("last",data.session.last)
-//       // localStorage.setItem("email",data.session.email)
-//       // localStorage.setItem("login",data.session.loggedIn)
-//       toast.success('🦄 Login Successful!');
-//       navigate('/medialist');
-//     } else {
-//       toast.error('Login Unsuccessful');
-//     }
-//     // showAlert(data)
-//   })
-//   .catch(function (err) {
-//       // console.log('something went wrong, call on database', err); // console.log the errors if any
-//   });
-// }
+function googleLogin() {
+  window.open("http://localhost:4000/auth/google", "_self");
+}
 
 function checkRedirect() {
   fetch('https://mwl-backend-v2.herokuapp.com/auth/verify', {
@@ -171,11 +150,18 @@ function checkRegistration() {
         Passport link must be href
         
         */}
-        <a href = "https://mwl-backend-v2.herokuapp.com/auth/google">
-        <Button className="button-20 m-2" block size = "lg">
+        <Button className="button-20 m-2" block size = "lg" onClick={googleLogin}>
             <FcGoogle /> Login with Google 
         </Button>
-        </a>
+        {/* <GoogleLogin
+            onSuccess={credentialResponse => {
+              console.log(credentialResponse);
+            }}
+          
+            onError={() => {
+              console.log('Login Failed');
+            }}
+          /> */}
       </Form>
     </div>
         </Modal.Body>
