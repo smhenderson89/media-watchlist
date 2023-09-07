@@ -4,7 +4,6 @@ import "./Login.css";
 import { useNavigate } from "react-router";
 import { toast } from 'react-toastify';
 import MWL from "./images/MWL.jpeg"
-import { FcGoogle } from 'react-icons/fc'
 
 export default function Login() {
   const [registerModalShow, setRegisterModalShow] = React.useState(false);
@@ -44,54 +43,6 @@ function checkLogin() {
   })
   .catch(function (err) {
       // console.log('something went wrong, call on database', err); // console.log the errors if any
-  });
-}
-
-// function googleLogin() {
-//   fetch('https://mwl-backend-v2.herokuapp.com/auth/google', {
-//       method: "GET",
-//       mode : "cors"
-//   }).then (res => res.json())
-//   .then (data => {
-//     if (data.login) {
-//       // Set data from backend storage into the front end Session Storage
-//       // localStorage.setItem("userID",data.session.userid)
-//       // localStorage.setItem("first",data.session.first)
-//       // localStorage.setItem("last",data.session.last)
-//       // localStorage.setItem("email",data.session.email)
-//       // localStorage.setItem("login",data.session.loggedIn)
-//       toast.success('🦄 Login Successful!');
-//       navigate('/medialist');
-//     } else {
-//       toast.error('Login Unsuccessful');
-//     }
-//     // showAlert(data)
-//   })
-//   .catch(function (err) {
-//       // console.log('something went wrong, call on database', err); // console.log the errors if any
-//   });
-// }
-
-function checkRedirect() {
-  fetch('https://mwl-backend-v2.herokuapp.com/auth/verify', {
-    method: "GET",
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    }
-  }).then (res => res.json())
-  .then (data => {
-      // console.log(data.registration);
-      if (data.result) {
-        console.log(data)
-        toast.success('🦄 Login Successful!');
-      } else {
-        console.log('fail error');
-      }
-      // showAlert(data)
-  })
-  .catch(function (err) {
-      // console.log('something went wrong, call on database', err); // 
   });
 }
 
@@ -164,18 +115,6 @@ function checkRegistration() {
         <Button className="button-19 m-2" block size="md" type="submit" onClick={checkLogin}>
           Login
         </Button>
-        <Button className="button-19 m-2" onClick = {checkRedirect}>Test Redirect</Button>
-        {/* DEBUG: DEV http://localhost:4000/auth/google/callback
-        ACTUAL SITE: https://mwl-backend-v2.herokuapp.com/auth/google 
-        
-        Passport link must be href
-        
-        */}
-        <a href = "https://mwl-backend-v2.herokuapp.com/auth/google">
-        <Button className="button-20 m-2" block size = "lg">
-            <FcGoogle /> Login with Google 
-        </Button>
-        </a>
       </Form>
     </div>
         </Modal.Body>
