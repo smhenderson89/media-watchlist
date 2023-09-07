@@ -48,7 +48,7 @@ function checkLogin() {
 }
 
 function googleLogin() {
-  window.open("http://localhost:4000/auth/google", "_self");
+  window.open("https://localhost:4000/auth/google", "_self");
 }
 
 function checkRedirect() {
