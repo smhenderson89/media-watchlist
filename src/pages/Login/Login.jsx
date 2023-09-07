@@ -4,7 +4,6 @@ import "./Login.css";
 import { useNavigate } from "react-router";
 import { toast } from 'react-toastify';
 import MWL from "./images/MWL.jpeg"
-import { FcGoogle } from 'react-icons/fc'
 
 export default function Login() {
   const [registerModalShow, setRegisterModalShow] = React.useState(false);
@@ -44,33 +43,6 @@ function checkLogin() {
   })
   .catch(function (err) {
       // console.log('something went wrong, call on database', err); // console.log the errors if any
-  });
-}
-
-function googleLogin() {
-  window.open("https://localhost:4000/auth/google", "_self");
-}
-
-function checkRedirect() {
-  fetch('https://mwl-backend-v2.herokuapp.com/auth/verify', {
-    method: "GET",
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    }
-  }).then (res => res.json())
-  .then (data => {
-      // console.log(data.registration);
-      if (data.result) {
-        console.log(data)
-        toast.success('🦄 Login Successful!');
-      } else {
-        console.log('fail error');
-      }
-      // showAlert(data)
-  })
-  .catch(function (err) {
-      // console.log('something went wrong, call on database', err); // 
   });
 }
 
@@ -143,25 +115,6 @@ function checkRegistration() {
         <Button className="button-19 m-2" block size="md" type="submit" onClick={checkLogin}>
           Login
         </Button>
-        <Button className="button-19 m-2" onClick = {checkRedirect}>Test Redirect</Button>
-        {/* DEBUG: DEV http://localhost:4000/auth/google/callback
-        ACTUAL SITE: https://mwl-backend-v2.herokuapp.com/auth/google 
-        
-        Passport link must be href
-        
-        */}
-        <Button className="button-20 m-2" block size = "lg" onClick={googleLogin}>
-            <FcGoogle /> Login with Google 
-        </Button>
-        {/* <GoogleLogin
-            onSuccess={credentialResponse => {
-              console.log(credentialResponse);
-            }}
-          
-            onError={() => {
-              console.log('Login Failed');
-            }}
-          /> */}
       </Form>
     </div>
         </Modal.Body>
