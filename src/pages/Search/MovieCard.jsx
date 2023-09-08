@@ -79,7 +79,7 @@ export default function MovieCard(props) {
       {/* copied this card syntax from react-bootstrap */}
       <Card className="movie-card" style={{ width: "15rem" }}>
         {/* using the the Poster variable defined from our prop deconstruction to reference a src="" for the image */}
-        <Card.Img class = "posterImage" onClick={() => setModalShow(true)} src={Poster === "N/A" ? imageNA : Poster} />
+        <Card.Img className = "posterImage" onClick={() => setModalShow(true)} src={Poster === "N/A" ? imageNA : Poster} />
 
         <Card.Body>
           {/* calling the title and year of the movie, within this react-bootstrap card */}
