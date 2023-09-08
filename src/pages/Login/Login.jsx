@@ -24,7 +24,10 @@ function checkLogin() {
       headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify(
+        {email: newEmail,
+        password: newPassword})
   }).then (res => res.json())
   .then (data => {
       if (data.login) {
