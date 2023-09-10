@@ -5,7 +5,7 @@
 <div align="center">
 
   <h3 align="center">Media Watch List - Information at your fingertips</h3>
-  https://media-watch-list.herokuapp.com/
+  https://media-watchlist.vercel.app/
 </div>
 
 <!-- TABLE OF CONTENTS -->
